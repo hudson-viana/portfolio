@@ -1,65 +1,66 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import Separator from "@/components/Separator";
 import { contributionsData } from "@/lib/data";
-import { FaGithubSquare } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-type ContributionsProps = (typeof contributionsData)[number];
 
-export default function Contributions({
-  imageUrlBefore,
-  titleBefore,
-  descriptionBefore,
-  imageUrlAfter,
-  titleAfter,
-  descriptionAfter,
-  githubPrUrl,
-  openSourceName,
-  openSourceLogo,
-}: ContributionsProps) {
+export default function Contributions() {
   return (
-    <section id="contributions" className="mb-28">
+    <motion.section
+      id="contributions"
+      className="scroll-mt-28 mb-28"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
       <SectionHeading>Featured contributions</SectionHeading>
       <ul>
         {contributionsData.map((contribution, index) => (
           <li
             key={index}
-            className="border border-black/10 bg-gray-200 rounded-lg hover:bg-gray-300 transition max-w-[42rem] mb-5"
+            className=" bg-[#313337] rounded-lg transition max-w-[42rem] mb-5"
           >
             <div className="sm:flex">
               <div className="flex flex-col items-center text-center">
-                <h3 className="font-bold pt-2">{contribution.titleBefore}</h3>
+                <h3 className="font-bold pt-2 text-xl">
+                  {contribution.titleBefore}
+                </h3>
                 <div className="pt-3 pr-5 pl-5 pb-2">
                   <Image
                     src={contribution.imageUrlBefore}
                     alt="Showing the contribution"
-                    className="shadow-2xl rounded-xl min-h-[18rem] max-h-[18rem] object-cover object-right-bottom"
+                    className="shadow-lg rounded-xl min-h-[18rem] max-h-[18rem] max-w-[18rem]"
                   />
                 </div>
-                <p className="pt-1 px-4 pb-3 text-gray-700">
+                <p className="pt-1 px-4 pb-3 text-[#b3b5ba] max-w-[21rem]">
                   {contribution.descriptionBefore}
                 </p>
               </div>
               <Separator hiddenWhenSM={true} />
               <div className="flex flex-col items-center text-center">
-                <h3 className="font-bold pt-2">{contribution.titleAfter}</h3>
+                <h3 className="font-bold pt-2 text-xl">
+                  {contribution.titleAfter}
+                </h3>
 
                 <div className="pt-3 pr-5 pl-5 pb-2">
                   <Image
                     src={contribution.imageUrlAfter}
                     alt="Showing the contribution"
-                    className="shadow-2xl rounded-xl min-h-[18rem] max-h-[18rem] object-cover object-right-bottom"
+                    className="shadow-lg rounded-xl min-h-[18rem] max-h-[18rem] max-w-[18rem]"
                   />
                 </div>
-                <p className="pt-1 px-4 pb-3 text-gray-700">
+                <p className="pt-1 px-4 pb-3 text-[#b3b5ba] max-w-[21rem]">
                   {contribution.descriptionAfter}
                 </p>
               </div>
             </div>
             <Separator hiddenWhenSM={false} />
             <div className="flex flex-col justify-center items-center">
-              <p className="text-sm text-gray-700">
+              <p className="text-sm text-[#b3b5ba]">
                 Review{" "}
                 <a
                   href={contribution.githubPrUrl}
@@ -70,8 +71,10 @@ export default function Contributions({
                   other fix/solutions in this PR.
                 </a>
               </p>
-              <div className="flex justify-center gap-2 items-center pt-2 pb-3">
-                <span className="font-bold text-sm text-gray-700">Open sorce:</span>
+              <div className="flex justify-center gap-2 items-center pt-2 pb-3 px-3">
+                <span className="font-bold text-sm text-[#b3b5ba]">
+                  Open sorce:
+                </span>
                 <Image
                   src={contribution.openSourceLogo}
                   alt="Open source organization logo"
@@ -81,15 +84,25 @@ export default function Contributions({
                   href={contribution.openSourceProjectUrl}
                   target="_blank"
                   rel="noopener"
-                  className="text-sm text-gray-700 underline"
+                  className="text-sm text-[#b3b5ba] underline"
                 >
                   {contribution.openSourceName}
                 </a>
               </div>
+              <ul className="flex flex-wrap pt-2 pb-5 gap-2 justify-center sm:justify-start">
+                {contribution.openSourceProjectTags.map((tag, index) => (
+                  <li
+                    className="bg-[#364d42] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-[#f5fef9] rounded-full "
+                    key={index}
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
             </div>
           </li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 }

@@ -4,10 +4,18 @@ import React from "react";
 import SectionHeading from "@/components/SectionHeading";
 import { projectsData } from "@/lib/data";
 import Project from "@/components/Project";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-28 mb-28">
+    <motion.section
+      id="projects"
+      className="scroll-mt-28 mb-28"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+
+    >
       <SectionHeading>Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
@@ -16,6 +24,6 @@ export default function Projects() {
           </React.Fragment>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
