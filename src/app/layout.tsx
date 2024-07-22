@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "../components/header";
-
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Hudson | Portfolio",
-  description: "Software Developer | Frontend | React | JavaScript | TypeScript",
+  description:
+    "I create, fix and improve websites, web apps and landing pages. I'm a Front-end developer aiming to become a MERN Full Stack developer. I continuously improve my skills by contributing to open source projects, creating personal projects that provide real solutions and value, and fully immersing myself in the development world by staying updated with best practices and news on YouTube, newsletters, Twitter(X), and coding during day, night and weekends. Currently, I'm specializing in the React ecosystem.",
 };
 
 export default function RootLayout({
@@ -17,12 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-50 text-gray-950 relative `}>
-      <div className="bg-[#83D0CB] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[20rem] sm:w-[68.75rem]"></div>
-      <div className="bg-[#145277] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[20rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] " />
-      <Header />
-        {children}</body>
+    <html lang="en" className="!scroll-smooth">
+      <body className="fontFamily bg-[#232529] text-[#b3b5ba] relative pt-28 sm:pt-36">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
