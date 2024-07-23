@@ -19,14 +19,14 @@ export default function Project({
     <div
       className="mb-3"
     >
-      <section className="bg-[#313337] max-w-[22rem] sm:max-w-[42rem] border border-black/5 rounded-lg transition">
-        <div className="flex flex-col items-center text-center  sm:text-left sm:flex-row">
-          <div className="sm:pl-10 sm:pr-2 py-4 max-w-[80%] sm:max-w-[50%] flex flex-col h-full">
+      <section className="bg-[#313337] max-w-[28rem] md:max-w-[42rem] border border-black/5 rounded-lg transition">
+        <div className="flex flex-col items-center text-center  md:text-left md:flex-row">
+          <div className="md:pl-10 md:pr-2 py-4 max-w-[80%] md:max-w-[50%] flex flex-col h-full">
             <h3 className="text-2xl font-bold">{title}</h3>
-            <p className="mt-2 mb-1 sm:mb-3 leading-relaxed text-[#b3b5ba] ">
+            <p className="mt-2 mb-2 md:mb-3 leading-relaxed text-[#b3b5ba] ">
               {description}
             </p>
-            <div className="flex mt-2 mb-1 sm:mb-3 text-[#b3b5ba] gap-2 justify-center sm:justify-start text-xl">
+            <div className="flex mt-2 mb-2 md:mb-3 text-[#b3b5ba] gap-2 justify-center md:justify-start text-xl">
               <a href={liveUrl} target="_blank" rel="noopener">
                 <TbWorldWww />
               </a>
@@ -34,7 +34,7 @@ export default function Project({
                 <FaGithub />
               </a>
             </div>
-            <ul className="flex flex-wrap py-2 gap-2 justify-center sm:justify-start">
+            <ul className="flex flex-wrap py-2 gap-2 justify-center md:justify-start">
               {tags.map((tag, index) => (
                 <li
                   className="bg-[#364d42] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-[#f5fef9] rounded-full "
@@ -45,12 +45,12 @@ export default function Project({
               ))}
             </ul>
           </div>
-          <div className="sm:px-10 sm:py-4 ">
+          <div className="md:px-10 md:py-4 ">
             <Image
               src={imageUrl}
               alt="Project preview"
               quality={95}
-              className="size-72 rounded-lg sm:size-60 mb-4 sm:my-4"
+              className="size-72 rounded-lg md:size-60 mb-4 md:my-4"
             />
           </div>
         </div>

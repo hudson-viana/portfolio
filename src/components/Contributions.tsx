@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Contributions() {
   return (
-    <section id="contributions" className="scroll-mt-28 mb-28">
+    <section id="contributions" className="scroll-mt-28 mb-28 max-w-[28rem] md:max-w-[42rem]">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,9 +20,9 @@ export default function Contributions() {
           {contributionsData.map((contribution, index) => (
             <li
               key={index}
-              className=" bg-[#313337] rounded-lg transition max-w-[42rem] mb-5"
+              className=" bg-[#313337] rounded-lg transition mb-5"
             >
-              <div className="sm:flex">
+              <div className="md:flex">
                 <div className="flex flex-col items-center text-center">
                   <h3 className="font-bold pt-2 text-xl">
                     {contribution.titleBefore}
@@ -87,7 +87,7 @@ export default function Contributions() {
                     {contribution.openSourceName}
                   </a>
                 </div>
-                <ul className="flex flex-wrap pt-2 pb-5 gap-2 justify-center sm:justify-start">
+                <ul className="flex flex-wrap pt-2 pb-5 px-4 gap-2 justify-center">
                   {contribution.openSourceProjectTags.map((tag, index) => (
                     <li
                       className="bg-[#364d42] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-[#f5fef9] rounded-full "

@@ -9,7 +9,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-40 px-8"
+      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-32 px-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 100 }}

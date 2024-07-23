@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mt-14 mb-10 px-4 text-center text-[#b3b5ba]">
+    <footer className="mt-14 mb-10 px-8 text-center text-[#b3b5ba]">
       <small className="mb-2 block text-xs">
         &copy; 2024 Hudson Viana. All rights reserved.
       </small>

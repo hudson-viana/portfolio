@@ -15,11 +15,11 @@ export default function Experience() {
         viewport={{ once: true }}
       >
         <SectionHeading>Experiencie</SectionHeading>
-        <ul className="px-5">
+        <ul>
           {experiencesData.map((experience, index) => (
             <li
               key={index}
-              className="bg-[#313337] max-w-[22rem] sm:max-w-[42rem] border border-black/5 rounded-lg overflow-hidden transition pl-4 pt-5 pb-5 pr-5"
+              className="bg-[#313337] max-w-[28rem] md:max-w-[42rem] border border-black/5 rounded-lg overflow-hidden transition pl-4 pt-5 pb-5 pr-5"
             >
               <div className="flex gap-3">
                 <Image
