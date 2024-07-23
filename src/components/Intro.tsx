@@ -71,6 +71,7 @@ export default function Intro() {
           href="https://www.linkedin.com/in/hudson-viana/"
           target="_blank"
           rel="noopener"
+          aria-label="Linkedin"
         >
           <FaLinkedin />
         </a>
@@ -79,6 +80,7 @@ export default function Intro() {
           href="https://x.com/HudsonViana31"
           target="_blank"
           rel="noopener"
+          aria-label="Twitter"
         >
           <FaSquareXTwitter />
         </a>
@@ -87,6 +89,7 @@ export default function Intro() {
           href="https://github.com/hudson-viana"
           target="_blank"
           rel="noopener"
+          aria-label="Github"
         >
           <FaGithubSquare />
         </a>
