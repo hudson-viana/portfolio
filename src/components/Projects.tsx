@@ -8,22 +8,21 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <motion.section
-      id="projects"
-      className="scroll-mt-28 mb-28"
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-
-    >
-      <SectionHeading>Projects</SectionHeading>
-      <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        ))}
-      </div>
-    </motion.section>
+    <section id="projects" className="scroll-mt-28 mb-28">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionHeading>Projects</SectionHeading>
+        <div>
+          {projectsData.map((project, index) => (
+            <React.Fragment key={index}>
+              <Project {...project} />
+            </React.Fragment>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 }
