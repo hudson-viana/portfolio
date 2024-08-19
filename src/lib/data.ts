@@ -5,6 +5,8 @@ import img219after from "@public/219contribution/219-after.png";
 import img219before from "@public/219contribution/219-before.png";
 import img213before from "@public/213contribution/213-before.png";
 import img213afterGroup from "@public/213contribution/213-after-group.png";
+import dictionary from "../../public/dictionary.png";
+import portfolio from "../../public/portfolio.png";
 
 export const links = [
   {
@@ -67,6 +69,24 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "English Dictionary",
+    description:
+      "This web app utilizes the Free Dictionary API to search for word meanings, synonyms and antonyms.",
+    tags: ["React (Vite)", "Typescript", "TailwindCSS"],
+    imageUrl: dictionary,
+    liveUrl: "https://react-dictionary-hudson.vercel.app/",
+    githubUrl: "https://github.com/hudson-viana/react-dictionary",
+  },
+  {
+    title: "My portfolio",
+    description:
+      "This project was created to list my projects, experiences, contributions and skills",
+    tags: ["Next.js (React)", "Typescript", "TailwindCSS"],
+    imageUrl: portfolio,
+    liveUrl: "https://hudsonviana.vercel.app/",
+    githubUrl: "https://github.com/hudson-viana/portfolio",
+  },
   {
     title: "GitHub Repository Search",
     description:
