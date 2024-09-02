@@ -18,7 +18,7 @@ export default function Skills() {
         viewport={{ once: true }}
       >
         <SectionHeading>Skills</SectionHeading>
-        <ul className="flex flex-wrap justify-center gap-2 text-lg text-[#f5fef9]">
+        <ul className="flex flex-wrap justify-center gap-3 text-lg text-[#f5fef9]">
           {skillsData.map((skill, index) => (
             <li
               className="bg-[#364d42] borderBlack rounded-xl px-3 py-1"

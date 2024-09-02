@@ -33,29 +33,25 @@ export default function Intro() {
         </div>
 
         <h1 className="text-3xl font-black mt-4 px-10 sm:px-36 ">
-          I create, fix and improve websites, web apps and landing pages.
+          I create, fix and improve websites and web apps
         </h1>
         <h2 className="px-8 sm:px-12 text-[0.95rem] !leading-[1.75] mt-4 italic">
-          I&#39;m a <span className="font-bold">Front-end developer</span>{" "}
-          aiming to become a MERN¹ Full Stack developer. I continuously improve
-          my skills by contributing to{" "}
-          <span className="font-bold">open source projects</span>, creating
-          personal projects that provide{" "}
-          <span className="font-bold">real solutions and value</span>, and fully
-          immersing myself in the development world by staying updated with{" "}
-          <span className="font-bold">best practices and news</span> on YouTube,
-          newsletters, Twitter(X), and coding during day, night and weekends.
-          Currently, I&#39;m specializing in the{" "}
-          <span className="font-bold">React ecosystem</span>².
-        </h2>
-        <h3 className="text-[0.7rem] text-gray-400 mt-3">
-          1. MERN: MongoDB, Express.js, React, and Node.js
-        </h3>
-        <h3 className="mb-5 text-[0.7rem] text-gray-400">
-          2. React ecosystem: Next.js, libraries, tools
-        </h3>
+          I&#39;m a <span className="font-extrabold">Front-end developer</span>{" "}
+          with experience, bachelor&#39;s degree in progress in{" "}
+          <span className="font-extrabold">Software Engineering</span>, a Full
+          Stack Santander <span className="font-extrabold">Bootcamp</span>,
+          certifications,{" "}
+          <span className="font-extrabold">open source contributions</span>,
+          volunteer work, personal projects and a strong interest in technology.
+          I also keep up with news, videos, and newsletters about{" "}
+          <span className="font-extrabold">best practices</span>, trends, and
+          new rules. My future plan is to become a Full Stack Developer.
+          Currently, I am specializing in{" "}
+          <span className="font-extrabold">React and TypeScript</span> and their
+          related technologies: Vite, Next, libraries, tools, etc.
+        </h2>        
 
-        <div className="flex flex-row items-center justify-center gap-2 px-4 text-lg font-medium">
+        <div className="flex flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-5">
           <a
             className="bg-[#364d42] p-4 text-[#f5fef9] flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
             href="https://www.linkedin.com/in/hudson-viana/"

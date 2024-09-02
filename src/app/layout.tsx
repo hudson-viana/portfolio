@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Hudson | Portfolio",
   description:
-    "I create, fix and improve websites, web apps and landing pages. I'm a Front-end developer aiming to become a MERN Full Stack developer. I continuously improve my skills by contributing to open source projects, creating personal projects that provide real solutions and value, and fully immersing myself in the development world by staying updated with best practices and news on YouTube, newsletters, Twitter(X), and coding during day, night and weekends. Currently, I'm specializing in the React ecosystem.",
+    "I am a Front-end Developer with experience, bachelor’s degree in progress in software engineering, a Full Stack Santander Bootcamp, certifications, open source contributions, volunteer work, personal projects and a strong interest in technology.",
 };
 
 export default function RootLayout({
